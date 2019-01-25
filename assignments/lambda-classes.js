@@ -53,10 +53,10 @@ class ProjectManagers extends Instructor {
     this.favInstructor = attributes.favInstructor;
   }
   standup(slack) {
-    return `${this.name} announces to {slack}, @channel study times`
+    return `${this.name} announces to ${slack}, @channel study times`
   }
   debugsCode(student, subject) {
-    return `${this.name} debugs ${student.name}'s code ${subject}`
+    return `${this.name} debugs ${student.name}'s code on ${subject}`
   }
 }
 
@@ -131,3 +131,9 @@ const shawn = new ProjectManagers({
 
 
 console.log(cameron.demo('JavaScript'));
+console.log(josh.grade(cam, 'JavaScript'));
+console.log(cam.listsSubjects());
+console.log(miguel.PRAssignment('JavaScript'));
+console.log(cam.sprintChallenge('JavaScript'));
+console.log(elvis.standup('WEBPT4-Elvis'));
+console.log(shawn.debugsCode(miguel, 'JavaScript'));
